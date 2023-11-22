@@ -1,0 +1,60 @@
+
+a, a:hover { color: #731c34; text-decoration: none; }
+
+/*-----------------------------*/
+/*  Registration & Login Page  */
+/*-----------------------------*/
+
+/* Registration and Login */
+#welcome { position: relative; }
+
+/* Content */
+#welcome .content { position: relative; background-image: url(assets/images/bg-building.jpg); background-position: center center; background-size: cover; -webkit-background-size: cover; text-align: center;  }
+#welcome .content:after { position: absolute; content:""; background-color: rgba(253, 200, 65,0.7); width: 100%; height: 100%; }
+#welcome .content .logo { text-align: center; margin-bottom: 50px; }
+#welcome .content .logo img { width: 120px; }
+
+/* Inner */
+#welcome .inner { position:relative; width: 100%; z-index: 99; padding: 0 25px; }
+#welcome .inner h1 { position:relative; color: #731c34; text-transform: uppercase; font-weight: 600; }
+#welcome .inner p { position:relative; color: #111; text-transform: uppercase; font-weight: 600; font-size: 20px; }
+
+/* Form  */
+#welcome .form .inner { padding: 0 100px; }
+#welcome .form .inner h1 { margin-bottom: 50px; }
+#welcome .form .inner label { color: #731c34; font-weight: 600; }
+#welcome .form button[type="submit"] { background-color: #731c34; color: #fff; border: 1px solid #731c34;width: 100%; font-size: 20px; }
+
+/*-----------------------------*/
+/*         Dashboard           */
+/*-----------------------------*/
+/* Side Content */
+#dashboard .side-content { background-color: #fdc841b3; border-right: 3px solid #731c34; }
+#dashboard .side-content .logo { text-align: center; padding: 0 10px; }
+#dashboard .side-content .logo img { width: 60px; }
+#dashboard .side-content .logo h3 { font-size: 20px; }
+#dashboard .side-content .info-login { justify-content: center; padding: 10px 0; background-color: #731c34; color: #fff; margin: 10px 0; }
+#dashboard .side-content .info-login img { width: 60px; height: 60px; margin: 0 10px; border-radius: 100%; -webkit-boder-radius:100%; }
+#dashboard .side-content .info-login p { padding: 12px 0 0 25px; line-height: 1; }
+#dashboard .side-content .nav li i { display: inline-block; margin-right: 5px; width: 24px; }
+#dashboard .side-content .nav li a { display: block; color: #731c34; padding: 5px 10px; border-top: 1px transparent #731c34; border-bottom: 1px transparent #731c34;  }
+#dashboard .side-content .nav li a:hover { color: #2b020d; border-top: 1px dotted #731c34; border-bottom: 1px dotted #731c34; }
+#dashboard .side-content .nav li a:hover i { color: #2b020d;  }
+
+/* Main Content */
+#dashboard .main-content { background-color: #f0f0f0; padding: 0 25px; min-height: 100vh; }
+
+/* Title Page */
+.title { position: relative; padding: 10px 0; margin-bottom: 15px; border-bottom: 1px solid #731c34; }
+.title h2 {  color: #731c34; font-size: 24px; margin: 0; padding: 0;  }
+
+/* Info Box */
+.info-box .icon { background-color: #731c34; display: flex; align-items: center; justify-content: center; }
+.info-box .icon i { font-size: 50px; color: #fff; }
+.info-box .icon.bg-aqua { background-color: #00c0ef !important; }
+.info-box .icon.bg-red { background-color: #dd4b39 !important; }
+.info-box .icon.bg-green { background-color: #00a65a !important; }
+.info-box .icon.bg-yellow { background-color: #f39c12 !important; }
+.info-box .content { padding: 15px; }
+.info-box .content h5 { text-transform: uppercase; color: #c2c2c2; font-size: 16px; }
+.info-box .content h1 { text-transform: uppercase; color: #731c34; font-size: 30px; }
