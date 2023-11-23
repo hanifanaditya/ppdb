@@ -1,5 +1,14 @@
-<!-- library php -->
-<?php include "libs/inc.php"; ?>
+<?php
+// cek login
+session_start();
+if(isset($_SESSION["login"])){
+    // jika sudah , maka di redirect
+    header("location:index.php");
+}
+
+// library php
+include "libs/inc.php";
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +20,7 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
@@ -28,9 +37,10 @@
                     <div class="info-login">
                         <div class="d-flex">
                             <img src="assets/images/users.jpg" alt="">
+                            <?php $auth = $_SESSION["login"]; ?>
                             <p>
-                                <strong class="d-block">Hanifan</strong>
-                                <small>Administrator</small>
+                                <strong class="d-block"><?= $auth["nm_user"] ?></strong>
+                                <small><?= $auth["level_user"] ?></small>
                             </p>
                         </div>
                     </div>
@@ -45,13 +55,13 @@
                             <a class="nav-link" href="data_user.php"><i class="fas fa-table"></i> Data Pendaftar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="form_user.php"><i class="fas fa-user"></i> Users</a>
+                            <a class="nav-link" href="#"><i class="fas fa-user"></i> Users</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="fas fa-print"></i> Laporan</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                            <a class="nav-link" href="action_logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
                         </li>
                     </ul>
                 </div>

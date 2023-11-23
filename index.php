@@ -1,3 +1,12 @@
+<?php
+// cek login
+session_start();
+if(isset($_SESSION["login"])){
+    // jika sudah , maka di redirect
+    header("location:dashboard.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,10 +33,17 @@
             <div class="form col-md-6 d-flex align-items-center">
                 <div class="inner">
                     <h1>Login</h1>
-                    <form action="dashboard.html" method="POST">
+                    <!-- message -->
+                    <?php if(isset($_GET["pesan"])){ ?>
+                        <div class="alert alert-info" role="alert">
+                            <?= $_GET["pesan"] ?>
+                        </div>
+                    <?php } ?>
+                    <!-- end message -->
+                    <form action="action_login.php" method="POST">
                         <div class="form-group mb-3">
-                          <label for="nisn">NISN</label>
-                          <input type="text" class="form-control mt-1" name="nisn" id="nisn" aria-describedby="nisn">                          
+                          <label for="email">EMAIL</label>
+                          <input type="email" class="form-control mt-1" name="email" id="email" aria-describedby="email">                          
                         </div>
                         <div class="form-group mb-3">
                           <label for="password">PASSWORD</label>

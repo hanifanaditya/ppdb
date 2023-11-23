@@ -1,3 +1,12 @@
+<?php
+// cek login
+session_start();
+if(isset($_SESSION["login"])){
+    // jika sudah , maka di redirect
+    header("location:dashboard.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -23,6 +32,13 @@
                 </div>
                 <div class="form col-md-6 d-flex align-items-center">
                     <div class="inner">
+                        <!-- message -->
+                        <?php if(isset($_GET["pesan"])){ ?>
+                            <div class="alert alert-info" role="alert">
+                                <?= $_GET["pesan"] ?>
+                            </div>
+                        <?php } ?>
+                        <!-- end message -->
                         <h1>Registrasi</h1>
                         <form action="login.php">
                             <div class="form-group mb-3">
@@ -30,8 +46,8 @@
                                 <input type="text" class="form-control mt-1" name="nama" id="nama" aria-describedby="nama">                          
                             </div>                        
                             <div class="form-group  mb-3">
-                                <label for="nisn">NISN</label>
-                                <input type="text" class="form-control mt-1" name="nisn" id="nisn" aria-describedby="nisn">                          
+                                <label for="email">EMAIL</label>
+                                <input type="email" class="form-control mt-1" name="email" id="email" aria-describedby="email">                          
                             </div>
                             <div class="form-group  mb-3">
                                 <label for="password">PASSWORD</label>
