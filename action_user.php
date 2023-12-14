@@ -29,7 +29,7 @@ switch($action){
                 [
                     "nm_user" => $_POST["nm_user"],
                     "email_user" => $_POST["email_user"],
-                    "password_user" => $_POST["password_user"]=="" ? $_POST["old_user"] : md5($_POST["password_user"]),
+                    "password_user" => $_POST["password_user"]=="" ? $_POST["old_password"] : md5($_POST["password_user"]),
                     "level_user" => $_POST["level_user"],
                     "status" => $_POST["status"],
                 ]

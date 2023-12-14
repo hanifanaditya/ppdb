@@ -30,7 +30,7 @@ class Database {
     // get data form table
     function select($sql){
         try {
-            $cmd = $this ->connection->prepare($sql);
+            $cmd = $this->connection->prepare($sql);
             $cmd->execute();
             return $cmd->fetchAll();
         } catch(PDOException $err){
@@ -40,7 +40,8 @@ class Database {
     
     function query($sql){
         try {
-            $cmd = $this ->connection->exec($sql);
+            $cmd = $this->connection->exec($sql);
+
             return true;
         } catch(PDOException $err){
             return false;

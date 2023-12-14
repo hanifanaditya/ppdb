@@ -1,6 +1,6 @@
 <?php include "header.php"; ?>
     <!-- main content -->
-    <div class="main_content col-md-9 ms-auto">
+    <div class="main-content col-md-9 ms-auto">
         <div class="title">
             <h2>Data User</h2>
         </div>
@@ -23,7 +23,7 @@
         <a href="form_user.php" class="btn btn-danger btn-sm mb-3"><i class="fas fa-plus"></i> ADD NEW</a>
 
         <div class="table-responsive">
-            <table class="table table-bordered">
+            <table class="dt-Table table table-bordered" width="100%">
                 <thead class="bg-danger text-light">
                     <tr>
                         <th scope="col">ID</th>

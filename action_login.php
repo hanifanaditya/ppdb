@@ -7,9 +7,11 @@ $user = new MUser();
 $email = $_POST["email"];
 $password = $_POST["password"];
 
+
+
 // cek data user berdasarkan email
-$sql = "SELECT * FROM tb_user WHERE EMAIL_USER = '$email";
-$dtUser = $user->select($sql); // menampung data hasil eksekusi
+$sql = "SELECT * FROM tb_user WHERE email_user = '$email'";
+$dtUser = $user->select($sql); // menampung data hasil eksekusi                                   
 
 // cek
 if(count($dtUser)>0){

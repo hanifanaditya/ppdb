@@ -43,7 +43,7 @@ if(isset($_SESSION["login"])){
                     <form action="action_login.php" method="POST">
                         <div class="form-group mb-3">
                           <label for="email">EMAIL</label>
-                          <input type="email" class="form-control mt-1" name="email" id="email" aria-describedby="email">                          
+                          <input type="email" class="form-control mt-1" name="email" id="email" aria-describedby="email" autofocus>                          
                         </div>
                         <div class="form-group mb-3">
                           <label for="password">PASSWORD</label>

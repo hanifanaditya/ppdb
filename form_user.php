@@ -1,6 +1,6 @@
 <?php include "header.php"; ?>
     <!-- main content -->
-    <div class="main_content col-md-9 ms-auto">
+    <div class="main-content col-md-9 ms-auto">
         
         <!-- get data from tb_user -->
         <?php

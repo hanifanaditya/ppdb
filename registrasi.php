@@ -40,7 +40,7 @@ if(isset($_SESSION["login"])){
                         <?php } ?>
                         <!-- end message -->
                         <h1>Registrasi</h1>
-                        <form action="login.php">
+                        <form action="action_registrasi.php" method="POST">
                             <div class="form-group mb-3">
                                 <label for="nama">NAMA</label>
                                 <input type="text" class="form-control mt-1" name="nama" id="nama" aria-describedby="nama">                          
